@@ -1,0 +1,21 @@
+package com.batchnaveen.customerApp.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
+
+import com.batchnaveen.customerApp.constants.AppConstants;
+import com.batchnaveen.customerApp.entity.Order;
+
+public class OrderService {
+
+	@Autowired
+	private KafkaTemplate<String, Order> kafkaTemplate;
+
+	public String addMsg(Order order) {
+		
+		//send message to kafka topic
+		kafkaTemplate.send(AppConstants.TOPIC, order);
+		return "Msg Published to kafka topic";
+	}
+
+}

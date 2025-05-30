@@ -1,0 +1,23 @@
+package com.batchnaveen.customerApp.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.batchnaveen.customerApp.entity.Order;
+import com.batchnaveen.customerApp.service.OrderService;
+
+@RequestMapping("/kafka")
+@RestController
+public class OrderRestController {
+	
+		@Autowired
+		private OrderService service;
+		
+		public String createOrder(@RequestBody Order order)
+		{
+			String response = service.addMsg(order);
+			return response;
+		}
+}

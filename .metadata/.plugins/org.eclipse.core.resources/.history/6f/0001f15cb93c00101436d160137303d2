@@ -1,0 +1,5 @@
+package com.batchnaveen.customerApp.entity;
+
+public class Order {
+
+}

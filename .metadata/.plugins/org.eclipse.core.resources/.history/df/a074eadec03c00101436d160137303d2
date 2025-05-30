@@ -1,0 +1,12 @@
+package com.batchnaveen.customerApp.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.batchnaveen.customerApp.service.OrderService;
+
+public class OrderRestController {
+	
+		@Autowired
+		private OrderService service;
+		
+}

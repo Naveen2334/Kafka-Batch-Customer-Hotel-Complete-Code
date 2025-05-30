@@ -1,0 +1,5 @@
+package com.batchnaveen.HotelApp.Service;
+
+public class KafkaConsumerService {
+
+}

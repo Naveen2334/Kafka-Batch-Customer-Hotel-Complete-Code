@@ -1,0 +1,5 @@
+package com.batchnaveen.customerApp.config;
+
+public class KafkaConsumerConfig {
+
+}
